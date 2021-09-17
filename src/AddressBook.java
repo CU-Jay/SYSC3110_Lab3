@@ -39,6 +39,9 @@ public class AddressBook {
     }
 
     public static void main(String[] args) {
-        System.out.println("Address Book");
+        BuddyInfo b1 = new BuddyInfo("John", "Toronto", "6471239876");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(b1);
+        addressBook.removeBuddy("John");
     }
 }
