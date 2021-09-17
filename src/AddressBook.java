@@ -1,7 +1,6 @@
 // Jeneerthan Pageerathan
 // 101153531
 
-
 import java.util.ArrayList;
 
 public class AddressBook {
@@ -19,15 +18,16 @@ public class AddressBook {
     public boolean removeBuddy(String name) {
         int index = findBuddy(name);
         if (index != -1) {
-            buddies.remove(index);
+            removeBuddy(name);
             return true;
         }
         return false;
     }
 
     /**
+     * Locates BuddyInfo object in buddies using name
      * @param name String for the name of the BuddyInfo object
-     * @return index of the BuddyInfo object within buddies
+     * @return int for the index of the BuddyInfo object within buddies
      */
     private int findBuddy(String name) {
         for (int i = 0; i < buddies.size(); i++) {
@@ -39,10 +39,6 @@ public class AddressBook {
     }
 
     public static void main(String[] args) {
-        System.out.println("AddressBook");
-        BuddyInfo b1 = new BuddyInfo("John", "Toronto", "6471239876");
-        AddressBook addressBook = new AddressBook();
-        addressBook.addBuddy(b1);
-        addressBook.removeBuddy("John");
+        System.out.println("Address Book");
     }
 }
