@@ -12,7 +12,9 @@ public class AddressBook {
     }
 
     public void addBuddy(BuddyInfo buddy) {
-        buddies.add(buddy);
+        if (buddy != null) {
+            buddies.add(buddy);
+        }
     }
 
     public boolean removeBuddy(String name) {
